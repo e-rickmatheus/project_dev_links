@@ -1,0 +1,227 @@
+* {  /* *: todos os elementos */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* border-box: altura e largura do elemento é o mesmo que o tamanho definido */
+
+}
+
+
+:root {
+  --text-color: white; /* cor do texto */
+  --bg-url: url(./assets/bg-mobile.jpg); /* url da imagem de fundo */
+  --stroke-color: rgba(255, 255, 255, 0.5); /* cor do contorno */
+  --surface-color: rgba(255, 255, 255, 0.1); /* cor da superfície */
+  --surface-color-hover: rgba(255, 255, 255, 0.2); /* cor da superfície ao passar o mouse */
+  --social-links-color-hover: rgba(255, 255, 255, 0.2); /* cor do link ao passar o mouse */
+  --switch-thema-url: url(./assets/moon-stars.svg);
+}
+
+.light-theme { /* tema claro */
+  --text-color: black; /* cor do texto */
+  --bg-url: url(./assets/bg-mobile-light.jpg); /* url da imagem de fundo */
+  --stroke-color: rgba(0, 0, 0, 0.5); /* cor do contorno */
+  --surface-color: rgba(0, 0, 0, 0.1); /* cor da superfície */
+  --surface-color-hover: rgba(0, 0, 0, 0.2); /* cor da superfície ao passar o mouse */
+  --social-links-color-hover: rgba(0, 0, 0, 0.2); /* cor do link ao passar o mouse */
+  --switch-thema-url: url(./assets/sun.svg);
+}
+
+html, body {
+  height: 100%; /* altura do html e body */
+  width: 100%; /* largura do html e body */
+}
+
+body { /* body: corpo do documento */
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+ 
+  /* BACKGROUND GRADIENT 
+   background-image:  linear-gradient(  
+        45deg,  
+        hsl(201deg 37% 81%) 0%,  
+        hsl(202deg 39% 77%) 8%,  
+        hsl(204deg 40% 72%) 17%,  
+        hsl(206deg 41% 68%) 25%,  
+        hsl(207deg 42% 64%) 33%,  
+        hsl(209deg 42% 60%) 41%,  
+        hsl(210deg 42% 56%) 50%,  
+        hsl(212deg 41% 53%) 58%,  
+        hsl(214deg 41% 49%) 66%,  
+        hsl(217deg 45% 46%) 75%,  
+        hsl(219deg 48% 43%) 83%,  
+        hsl(223deg 50% 40%) 92%,  
+        hsl(228deg 51% 38%) 100%  
+    );  
+    */
+    background-repeat: no-repeat; /* repetição da imagem */
+    background-position: top center; /* posição da imagem */
+    background-size: 100% 100%; /* tamanho da imagem */
+  background: var(--bg-url) no-repeat top center/cover; 
+  /* background: cor imagem repetição posição/tamanho */
+}
+
+body * { /* todos os elementos dentro do body */
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color); /* cor do texto */
+  
+
+}
+
+#container {
+  width:  360px;
+  margin: 56px auto 0px;
+  display: block;
+  padding: 0 24px;
+}
+
+/*PROFILE*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*SWITCH*/
+/* teste     
+<i class="bi bi-sun-fill"></i>
+<i class="bi bi-moon-stars-fill"></i> */
+#switch{
+  position: relative;
+  width: 64px;
+  height: 24px;
+  margin: 4px auto;
+
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white  var(--switch-thema-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  top: 50%;
+  position: absolute;
+
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light-theme #switch button{
+  right: initial;
+  left: 5;
+}
+
+.dark-theme #switch button{
+  right: 0;
+  left: inherit;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+#description {
+  text-align: center;
+  font-size: 5px;
+  line-height: 24px;
+  margin-top: 8px;
+  padding: 0 16px;
+}
+
+/*links*/
+ul { /* ul: lista não ordenada */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a { /* a: link */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur (4px);
+  -webkit-backdrop-filter: blur (4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover { /* quando o mouse estiver em cima do link */
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+
+/*SOcial Links*/
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 25px
+}
+
+#social-links a { /* a: link */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover { /* quando o mouse estiver em cima do link */
+  background: var(--social-links-color-hover);
+
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 14px;
+}
+
+#rocketseat {
+  color: rgb(130 52 233);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+
+#rocketseat:hover { /* quando o mouse estiver em cima do link */
+  color: white;
+  text-decoration: underline;
+  background:  rgb(130 52 233);
+  transition: color 0.5s;
+  margin: 1px 1px;
+  padding: 4px 4px;
+  border-radius: 4px;
+
+}

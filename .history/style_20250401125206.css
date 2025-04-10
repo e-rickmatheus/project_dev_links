@@ -1,0 +1,21 @@
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /* background: color image repeat position/sizer */
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}

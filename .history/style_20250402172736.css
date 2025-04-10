@@ -1,0 +1,26 @@
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /* background: color image repeat position/sizer */
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+
+#container {
+  width:  360px;
+  border: 1px solid red;
+  margin: auto;
+}
+
+
+#profile img {
+  width: 112px;
+  display:;
+  border: 3px solid rgb(255, 0, 0);
+
+}

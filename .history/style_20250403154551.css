@@ -1,0 +1,136 @@
+* {  /* *: todos os elementos */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* border-box: altura e largura do elemento é o mesmo que o tamanho definido */
+
+}
+
+html, body {
+  height: 100%; /* altura do html e body */
+  width: 100%; /* largura do html e body */
+}
+
+body { /* body: corpo do documento */
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+ 
+  /* BACKGROUND GRADIENT 
+   background-image:  linear-gradient(  
+        45deg,  
+        hsl(201deg 37% 81%) 0%,  
+        hsl(202deg 39% 77%) 8%,  
+        hsl(204deg 40% 72%) 17%,  
+        hsl(206deg 41% 68%) 25%,  
+        hsl(207deg 42% 64%) 33%,  
+        hsl(209deg 42% 60%) 41%,  
+        hsl(210deg 42% 56%) 50%,  
+        hsl(212deg 41% 53%) 58%,  
+        hsl(214deg 41% 49%) 66%,  
+        hsl(217deg 45% 46%) 75%,  
+        hsl(219deg 48% 43%) 83%,  
+        hsl(223deg 50% 40%) 92%,  
+        hsl(228deg 51% 38%) 100%  
+    );  
+    */
+    background-repeat: no-repeat; /* repetição da imagem */
+    background-position: top center; /* posição da imagem */
+    background-size: 100% 100%; /* tamanho da imagem */
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover; 
+  /* background: cor imagem repetição posição/tamanho */
+}
+
+body * { /* todos os elementos dentro do body */
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  
+
+}
+
+#container {
+  width:  360px;
+  margin: 56px auto 0px;
+  display: block;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+
+/*links*/
+ul { /* ul: lista não ordenada */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a { /* a: link */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur (4px);
+  -webkit-backdrop-filter: blur (4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover { /* quando o mouse estiver em cima do link */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid white;
+}
+
+
+/*SOcial Links*/
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 25px
+}
+
+#social-links a { /* a: link */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover { /* quando o mouse estiver em cima do link */
+  background: rgba(255, 255, 255, 0.2);
+  
+
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0;
+  font
+}
