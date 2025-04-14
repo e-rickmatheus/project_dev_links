@@ -234,7 +234,7 @@ footer {
     --bg-url: url(./assets/bg-desktop.jpg); /* url da imagem de fundo */
   }
   .light-theme {
-  --bg-url: url(./assets/bg-desktop-light.jpg); /* url da imagem de fundo */
+  --bg-url: url(.assets/bg-desktop-light.jpg); /* url da imagem de fundo */
 
   }
 }
