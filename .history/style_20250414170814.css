@@ -228,7 +228,7 @@ ul li a:hover {
 
 #icons {
   fill: var(--icon-color); /* Aplica a cor ao SVG */
-  transition: fill ease; /* Transição suave ao mudar o tema */
+  transition: fill 0.3s ease; /* Transição suave ao mudar o tema */
 }
 
 footer {

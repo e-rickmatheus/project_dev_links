@@ -1,63 +1,44 @@
-* {
-  /* *: todos os elementos */
+* {  /* *: todos os elementos */
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* border-box: altura e largura do elemento é o mesmo que o tamanho definido */
+
 }
+
 
 :root {
   --text-color: white; /* cor do texto */
   --bg-url: url(./assets/bg-mobile.jpg); /* url da imagem de fundo */
   --stroke-color: rgba(255, 255, 255, 0.5); /* cor do contorno */
   --surface-color: rgba(255, 255, 255, 0.1); /* cor da superfície */
-  --surface-color-hover: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* cor da superfície ao passar o mouse */
-  --highlight-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* cor do link ao passar o mouse */
+  --surface-color-hover: rgba(255, 255, 255, 0.2); /* cor da superfície ao passar o mouse */
+  --social-links-color-hover: rgba(255, 255, 255, 0.2); /* cor do link ao passar o mouse */
   --switch-thema-url: url(./assets/moon-stars.svg);
-  --icon-color: #fff; /* Cor para o tema escuro */
 }
 
-.light-theme {
-  /* tema claro */
+.light-theme { /* tema claro */
   --text-color: black; /* cor do texto */
   --bg-url: url(./assets/bg-mobile-light.jpg); /* url da imagem de fundo */
   --stroke-color: rgba(0, 0, 0, 0.5); /* cor do contorno */
   --surface-color: rgba(0, 0, 0, 0.1); /* cor da superfície */
-  --surface-color-hover: rgba(
-    0,
-    0,
-    0,
-    0.2
-  ); /* cor da superfície ao passar o mouse */
-  --highlight-color: rgba(0, 0, 0, 0.2); /* cor do link ao passar o mouse */
+  --surface-color-hover: rgba(0, 0, 0, 0.2); /* cor da superfície ao passar o mouse */
+  --social-links-color-hover: rgba(0, 0, 0, 0.2); /* cor do link ao passar o mouse */
   --switch-thema-url: url(./assets/sun.svg);
-   --icon-color: #000; /* Cor padrão para o tema claro */
 }
 
-html,
-body {
+html, body {
   height: 100%; /* altura do html e body */
   width: 100%; /* largura do html e body */
 }
 
-body {
-  /* body: corpo do documento */
+body { /* body: corpo do documento */
   /*
   background-image: url(./assets/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   */
-
+ 
   /* BACKGROUND GRADIENT 
    background-image:  linear-gradient(  
         45deg,  
@@ -76,22 +57,23 @@ body {
         hsl(228deg 51% 38%) 100%  
     );  
     */
-  /* background-repeat: no-repeat; /* repetição da imagem */
-  /* background-position: top center; /* posição da imagem */
-  /* background-size: 100% 100%; /* tamanho da imagem */
-  background: var(--bg-url) no-repeat top center/cover;
+    /* background-repeat: no-repeat; /* repetição da imagem */
+    /* background-position: top center; /* posição da imagem */
+    /* background-size: 100% 100%; /* tamanho da imagem */
+  background: var(--bg-url) no-repeat top center/cover; 
   height: 100vh; /* altura do body */
   /* background: cor imagem repetição posição/tamanho */
 }
 
-body * {
-  /* todos os elementos dentro do body */
-  font-family: "Inter", sans-serif;
+body * { /* todos os elementos dentro do body */
+  font-family: 'Inter', sans-serif;
   color: var(--text-color); /* cor do texto */
+  
+
 }
 
 #container {
-  width: 100%; /* largura do container */
+  width:  100%; /* largura do container */
   max-width: 588px; /* largura máxima do container */
   margin: 56px auto 0px;
   padding: 0 24px;
@@ -117,38 +99,34 @@ body * {
 /* teste     
 <i class="bi bi-sun-fill"></i>
 <i class="bi bi-moon-stars-fill"></i> */
-#switch {
+#switch{
   position: relative;
   width: 64px;
   height: 24px;
   margin: 4px auto;
+
 }
 
 #switch button {
   width: 32px;
   height: 32px;
-  background: white var(--switch-thema-url) no-repeat center;
+  background: white  var(--switch-thema-url) no-repeat center;
   border: 0;
   border-radius: 50%;
 
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 10;
+  z-index: 1;
   transform: translateY(-50%);
-  cursor: pointer;
 }
 
-.light-theme #switch button {
+.light-theme #switch button{
   animation: slide-in 0.2s forwards; /* forwards: mantém o estado final da animação */
 }
 
-.dark-theme #switch button {
+.dark-theme #switch button{
   animation: slide-back 0.2s forwards; /* forwards: mantém o estado final da animação */
-}
-
-#switch button:hover {
-  outline: 8px solid var(--highlight-color); /* contorno do botão ao passar o mouse */
 }
 
 #switch span {
@@ -166,12 +144,12 @@ body * {
   text-align: center;
   font-size: 10px;
   font-weight: 500;
-  line-height: 10px;
+  
+
 }
 
 /*links*/
-ul {
-  /* ul: lista não ordenada */
+ul { /* ul: lista não ordenada */
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -179,8 +157,7 @@ ul {
   padding: 24px 0;
 }
 
-ul li a {
-  /* a: link */
+ul li a { /* a: link */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,22 +174,21 @@ ul li a {
   transition: background 0.2s;
 }
 
-ul li a:hover {
-  /* quando o mouse estiver em cima do link */
+ul li a:hover { /* quando o mouse estiver em cima do link */
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
-/*SOCIAL LINKS*/
+
+/*SOcial Links*/
 #social-links {
   display: flex;
   justify-content: center;
   padding: 24px 0;
-  font-size: 25px;
+  font-size: 25px
 }
 
-#social-links a {
-  /* a: link */
+#social-links a { /* a: link */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,14 +197,9 @@ ul li a:hover {
   border-radius: 50%;
 }
 
-#social-links a:hover {
-  /* quando o mouse estiver em cima do link */
-  background: var(--highlight-color);
-}
+#social-links a:hover { /* quando o mouse estiver em cima do link */
+  background: var(--social-links-color-hover);
 
-#icons {
-  fill: var(--icon-color); /* Aplica a cor ao SVG */
-  transition: fill ease; /* Transição suave ao mudar o tema */
 }
 
 footer {
@@ -244,16 +215,17 @@ footer {
   transition: color 0.5s;
 }
 
-#rocketseat:hover {
-  /* quando o mouse estiver em cima do link */
+#rocketseat:hover { /* quando o mouse estiver em cima do link */
   color: white;
   text-decoration: underline;
-  background: rgb(130 52 233);
+  background:  rgb(130 52 233);
   transition: color 0.5s;
   margin: 1px 1px;
   padding: 4px 4px;
   border-radius: 4px;
+
 }
+
 
 /*media queries*/
 @media (min-widht: 700px) {
@@ -261,25 +233,26 @@ footer {
     --bg-url: url(./assets/bg-desktop.jpg); /* url da imagem de fundo */
   }
   .light-theme {
-    --bg-url: url(./assets/bg-desktop-light.jpg); /* url da imagem de fundo */
+  --bg-url: url(./assets/bg-desktop-light.jpg); /* url da imagem de fundo */
+
   }
 }
 
 /* ANIMATION */
-@keyframes slide-in {
-  from {
-    left: 0;
+@keyframes side-in{
+  from{
+    left:0;
   }
   to {
-    left: 50%;
+    left:50%
   }
 }
 
-@keyframes slide-back {
+@keyframes slide-back{
   from {
-    left: 50%;
+    left:50%
   }
   to {
-    left: 0;
+    left:0;
   }
 }

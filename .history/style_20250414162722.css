@@ -23,7 +23,6 @@
     0.2
   ); /* cor do link ao passar o mouse */
   --switch-thema-url: url(./assets/moon-stars.svg);
-  --icon-color: #fff; /* Cor para o tema escuro */
 }
 
 .light-theme {
@@ -40,7 +39,6 @@
   ); /* cor da superfície ao passar o mouse */
   --highlight-color: rgba(0, 0, 0, 0.2); /* cor do link ao passar o mouse */
   --switch-thema-url: url(./assets/sun.svg);
-   --icon-color: #000; /* Cor padrão para o tema claro */
 }
 
 html,
@@ -166,7 +164,7 @@ body * {
   text-align: center;
   font-size: 10px;
   font-weight: 500;
-  line-height: 10px;
+  
 }
 
 /*links*/
@@ -224,11 +222,6 @@ ul li a:hover {
 #social-links a:hover {
   /* quando o mouse estiver em cima do link */
   background: var(--highlight-color);
-}
-
-#icons {
-  fill: var(--icon-color); /* Aplica a cor ao SVG */
-  transition: fill ease; /* Transição suave ao mudar o tema */
 }
 
 footer {

@@ -226,11 +226,6 @@ ul li a:hover {
   background: var(--highlight-color);
 }
 
-#icons {
-  fill: var(--icon-color); /* Aplica a cor ao SVG */
-  transition: fill ease; /* Transição suave ao mudar o tema */
-}
-
 footer {
   text-align: center;
   padding: 24px 0;
