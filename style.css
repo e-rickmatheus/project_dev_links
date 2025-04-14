@@ -72,9 +72,9 @@ body * { /* todos os elementos dentro do body */
 }
 
 #container {
-  width:  360px;
+  width:  100%; /* largura do container */
+  max-width: 588px; /* largura máxima do container */
   margin: 56px auto 0px;
-  display: block;
   padding: 0 24px;
 }
 
