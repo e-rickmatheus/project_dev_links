@@ -262,7 +262,7 @@ footer {
 
 .icon-heart {
   vertical-align: middle; /* Alinha o ícone ao meio do texto */
-  font-size: 1.1em; /* Ajusta o tamanho do ícone para combinar com o texto */
+  font-size: 1.em; /* Ajusta o tamanho do ícone para combinar com o texto */
 
 }
 

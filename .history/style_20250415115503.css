@@ -84,8 +84,6 @@ body {
   background: var(--bg) no-repeat top center/cover;
   height: 100vh; /* altura do body */
   /* background: cor imagem repetição posição/tamanho */
-  margin: 0;
-  padding: 0;
 }
 
 body * {
@@ -260,28 +258,19 @@ footer {
   border-radius: 4px;
 }
 
-.icon-heart {
-  vertical-align: middle; /* Alinha o ícone ao meio do texto */
-  font-size: 1.1em; /* Ajusta o tamanho do ícone para combinar com o texto */
-
-}
-
 /*media queries*/
 @media (min-width: 700px) {
   :root {
-    /* Tema padrão (dark) para desktop */
-    --bg: url(./assets/bg-desktop-dark.jpg);
+    --bg: url(./assets/bg-desktop.jpg); /* url da imagem de fundo para desktop */
   }
-
   .light-theme {
-    /* Tema claro para desktop */
-    --bg: url(./assets/bg-desktop-light.jpg);
+    --bg: url(./assets/bg-desktop-light.jpg); /* url da imagem de fundo para desktop no tema claro */
   }
   #social-links {
-    display: flex; /* altera para grid */
-    grid-template-columns: repeat(2,1fr); /* 2 colunas */
+    display: grid; /* altera para grid */
+    grid-template-columns: repeat (2,1fr); /* 2 colunas */
+    grid-template-rows: repeat (2,1fr); /* 2 linhas */
     gap: 16px; /* espaçamento entre os itens */
-    justify-content: center; /* Centraliza o grid horizontalmente */
   }
 }
 

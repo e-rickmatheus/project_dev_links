@@ -260,12 +260,6 @@ footer {
   border-radius: 4px;
 }
 
-.icon-heart {
-  vertical-align: middle; /* Alinha o ícone ao meio do texto */
-  font-size: 1.1em; /* Ajusta o tamanho do ícone para combinar com o texto */
-
-}
-
 /*media queries*/
 @media (min-width: 700px) {
   :root {
@@ -278,8 +272,9 @@ footer {
     --bg: url(./assets/bg-desktop-light.jpg);
   }
   #social-links {
-    display: flex; /* altera para grid */
+    display: grid; /* altera para grid */
     grid-template-columns: repeat(2,1fr); /* 2 colunas */
+    grid-template-rows: repeat(2,1fr); /* 2 linhas */
     gap: 16px; /* espaçamento entre os itens */
     justify-content: center; /* Centraliza o grid horizontalmente */
   }

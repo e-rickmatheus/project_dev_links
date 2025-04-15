@@ -6,9 +6,8 @@
 }
 
 :root {
-  /* Tema padrão (dark) */
-  --bg: url(./assets/bg-mobile-dark.jpg); /* Fundo padrão para mobile no tema dark */
   --text-color: white; /* cor do texto */
+  --bg-url: url(./assets/bg-mobile.jpg); /* url da imagem de fundo */
   --stroke-color: rgba(255, 255, 255, 0.5); /* cor do contorno */
   --surface-color: rgba(255, 255, 255, 0.1); /* cor da superfície */
   --surface-color-hover: rgba(
@@ -28,10 +27,9 @@
 }
 
 .light-theme {
-  /* Tema claro */
-  --bg: url(./assets/bg-mobile-light.jpg); /* Fundo padrão para mobile no tema light */
   /* tema claro */
   --text-color: black; /* cor do texto */
+  --bg-url: url(./assets/bg-mobile-light.jpg); /* url da imagem de fundo */
   --stroke-color: rgba(0, 0, 0, 0.5); /* cor do contorno */
   --surface-color: rgba(0, 0, 0, 0.1); /* cor da superfície */
   --surface-color-hover: rgba(
@@ -81,11 +79,9 @@ body {
   /* background-repeat: no-repeat; /* repetição da imagem */
   /* background-position: top center; /* posição da imagem */
   /* background-size: 100% 100%; /* tamanho da imagem */
-  background: var(--bg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
   height: 100vh; /* altura do body */
   /* background: cor imagem repetição posição/tamanho */
-  margin: 0;
-  padding: 0;
 }
 
 body * {
@@ -260,28 +256,19 @@ footer {
   border-radius: 4px;
 }
 
-.icon-heart {
-  vertical-align: middle; /* Alinha o ícone ao meio do texto */
-  font-size: 1.1em; /* Ajusta o tamanho do ícone para combinar com o texto */
-
-}
-
 /*media queries*/
-@media (min-width: 700px) {
-  :root {
-    /* Tema padrão (dark) para desktop */
-    --bg: url(./assets/bg-desktop-dark.jpg);
+@media (min-widht: 700px) {
+  :root: {
+    --bg-url: url(/); /* url da imagem de fundo */
   }
-
   .light-theme {
-    /* Tema claro para desktop */
-    --bg: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/bg-desktop-light.jpg); /* url da imagem de fundo */
   }
   #social-links {
-    display: flex; /* altera para grid */
-    grid-template-columns: repeat(2,1fr); /* 2 colunas */
+    display: grid; /* altera para grid */
+    grid-template-columns: repeat (2,1fr); /* 2 colunas */
+    grid-template-rows: repeat (2,1fr); /* 2 linhas */
     gap: 16px; /* espaçamento entre os itens */
-    justify-content: center; /* Centraliza o grid horizontalmente */
   }
 }
 

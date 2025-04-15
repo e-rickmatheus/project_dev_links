@@ -260,12 +260,6 @@ footer {
   border-radius: 4px;
 }
 
-.icon-heart {
-  vertical-align: middle; /* Alinha o ícone ao meio do texto */
-  font-size: 1.1em; /* Ajusta o tamanho do ícone para combinar com o texto */
-
-}
-
 /*media queries*/
 @media (min-width: 700px) {
   :root {
