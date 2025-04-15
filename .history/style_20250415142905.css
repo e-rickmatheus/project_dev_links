@@ -266,7 +266,7 @@ footer {
 
 }
 
-.icon-heart:hover {
+.icon-heart #hover {
   color: red; /* Cor do coração ao passar o mouse */
   transition: color 0.5s;
 }

@@ -266,10 +266,6 @@ footer {
 
 }
 
-.icon-heart:hover {
-  color: red; /* Cor do coração ao passar o mouse */
-  transition: color 0.5s;
-}
 
 /*media queries*/
 @media (min-width: 700px) {

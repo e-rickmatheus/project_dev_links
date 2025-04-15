@@ -266,9 +266,10 @@ footer {
 
 }
 
-.icon-heart:hover {
-  color: red; /* Cor do coração ao passar o mouse */
-  transition: color 0.5s;
+.icon-heart {
+  vertical-align: middle; /* Alinha o ícone ao meio do texto */
+  font-size: 1.1em; /* Ajusta o tamanho do ícone para combinar com o texto */
+
 }
 
 /*media queries*/
